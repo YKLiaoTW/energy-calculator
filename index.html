@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚡ 能量換算計算機 — 把抽象能量變成有畫面感的對照</title>
+  <meta name="description" content="輸入地震規模、能量單位或常見事件，立刻看到相當於幾顆廣島核彈、幾億份營養午餐、幾顆天照大神粒子的對照。">
+  <meta property="og:title" content="⚡ 能量換算計算機">
+  <meta property="og:description" content="把抽象能量變成有畫面感的對照 — 地震、核彈、營養午餐、太陽花學運、太陽輻射、天照粒子⋯ 一鍵換算。">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h1>⚡ 能量換算計算機</h1>
+      <p class="subtitle">把抽象能量變成有畫面感的對照</p>
+    </header>
+
+    <main class="app-grid">
+      <section class="col-input glass-container" aria-label="輸入區">
+        <h2 class="section-title">◆ 輸入</h2>
+        <div class="input-row">
+          <label for="value-input">數值</label>
+          <input id="value-input" type="text" inputmode="decimal" autocomplete="off" value="7.3">
+        </div>
+        <div class="input-row">
+          <label for="unit-select">單位</label>
+          <select id="unit-select"></select>
+        </div>
+
+        <h2 class="section-title">◆ 快速範例</h2>
+        <div id="preset-list" class="preset-list" aria-label="預設事件"></div>
+
+        <button id="copy-share" class="copy-share-btn" type="button">🔗 複製分享連結</button>
+      </section>
+
+      <section class="col-result" aria-label="換算結果">
+        <div class="glass-container">
+          <h2 class="section-title">◆ 正規單位</h2>
+          <div id="standard-results" class="result-list standard"></div>
+        </div>
+        <div class="glass-container">
+          <h2 class="section-title">◆ 親近的譬喻</h2>
+          <div id="fun-results" class="result-grid fun"></div>
+        </div>
+        <div class="glass-container co2-card">
+          <h2 class="section-title">🌍 若由發電產生這些能量，會排放多少 CO₂</h2>
+          <div id="co2-results" class="result-list co2"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      資料來源：<a href="#" id="data-source-link">能量計算機.xlsx</a>，
+      設計風格沿襲 <a href="https://github.com/" target="_blank" rel="noopener">GRB</a>，
+      譬喻精神致敬 <a href="https://github.com/g0v" target="_blank" rel="noopener">g0v 核電翻譯機</a>。
+    </footer>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿group,label,emoji,unit,value,note,override
+# ─── 預設按鈕（左欄「快速範例」）───────────────────────
+# group=分組標籤；label=按鈕文字；emoji=圖示
+# unit=填入的單位 key（必須是 UNITS 內已定義的；含 energy_references.csv 的 key）
+# value=填入的數值；note 與 override 可留空
+# 要刪除某筆預設，整列刪掉即可
+#
+# ★ 連動原則：
+#   能對應到 energy_references.csv 單一條目者，unit 直接寫該 ref key、value=1，
+#   日後改 energy_references.csv 數值會自動連動。
+#   無法對應（例如每筆規模都不同的地震）者，使用標準單位 richter/mw + 數值。
+#
+# ─── 地震（每筆規模不同，使用標準單位）─────────────────
+地震,1999 集集 921,🇹🇼,richter,7.3,,
+地震,2016 美濃地震,🇹🇼,richter,6.6,,
+地震,2018 花蓮地震,🇹🇼,mw,6.4,,
+地震,2024 0403 花蓮地震,🇹🇼,richter,7.1,,
+地震,2004 南亞海嘯,🌏,mw,9.2,,
+地震,2008 汶川地震,🌏,mw,8.3,,
+地震,2011 311 東日本,🌊,mw,9.1,,
+地震,2024 能登半島,🇯🇵,mw,7.5,,
+# ─── 武器 / 大事件（連動 energy_references）──────────
+武器,廣島核彈,💣,hiroshima,1,,
+武器,沙皇氫彈,☢️,tsar,1,,
+事件,觀塘 LNG 槽爆炸,🔥,guantang_lng,1,,
+# ─── 燃料 / 能源（連動 energy_references）────────────
+燃料,汽油 1 公升,⛽,gasoline_l,1,,
+燃料,LNG 1 公升液態,🛢️,lng_l,1,override 由 energy_references 控制 (xlsx 9000 cal/L 顯誤),true
+燃料,U-235 1 g 核分裂,⚛️,u235_g,1,,
+# ─── 自然 / 電力（連動 energy_references）────────────
+自然,太陽 1 小時送到地球,☀️,solar_earth_hr,1,,
+自然,地表 1 m² 1 小時日照,🌤️,solar_m2_hr,1,,
+電力,核四 1 小時發電,⚡,nuke4_hr,1,,
+電力,台中火力 1 小時發電,🏭,taichung_hr,1,,
+電力,筆電 65W × 1 小時,💻,laptop_hr,1,,
+# ─── 食物 / 運動（連動 energy_references）────────────
+食物,營養午餐（國小4-6）,🍱,lunch_es_high,1,,
+食物,香蕉一根,🍌,banana,1,,
+食物,太陽餅一個,🌞,suncake,1,,
+運動,慢跑 1 小時,🏃,jog_hr,1,,

@@ -1,0 +1,393 @@
+/* ────────────────────────────────────────────────────────────
+ * 能量換算計算機 — 樣式
+ * 設計 token 沿用 GRB（紫藍漸層 + Glassmorphism + Noto Sans TC）
+ * 版面：1100px 兩欄，<768px 自動堆疊單欄
+ * ──────────────────────────────────────────────────────────── */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #2d3748;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.page {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ───── 標頭 ───── */
+.page-header {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  margin-bottom: 8px;
+}
+.page-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.subtitle {
+  font-size: 15px;
+  opacity: 0.92;
+  font-weight: 300;
+}
+
+/* ───── Glass card 配方（沿用 GRB style.css 18-31）───── */
+.glass-container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 32px;
+  box-shadow: 0 10px 40px 0 rgba(31, 38, 135, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* ───── 兩欄布局 ───── */
+.app-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 380px) 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.col-input {
+  position: sticky;
+  top: 24px;
+}
+.col-result {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  body { padding: 20px 12px; }
+  .page-header h1 { font-size: 26px; }
+  .app-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .col-input {
+    position: static;
+  }
+  .glass-container {
+    padding: 24px;
+  }
+}
+
+/* ───── Section 標題 ───── */
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c5282;
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.section-title:not(:first-child) {
+  margin-top: 22px;
+}
+
+/* ───── 輸入欄 ───── */
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.input-row label {
+  font-size: 14px;
+  color: #4a5568;
+  width: 44px;
+  flex-shrink: 0;
+}
+.input-row input,
+.input-row select {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  font-size: 16px;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.2s;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.input-row input:focus,
+.input-row select:focus {
+  border-color: #667eea;
+}
+.input-row input {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ───── 預設按鈕 ───── */
+.preset-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-height: 460px;
+  overflow-y: auto;
+  margin: -4px -4px 0 -4px;
+  padding: 4px;
+}
+.preset-group-title {
+  font-size: 12px;
+  color: #a0aec0;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+.preset-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.preset-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: left;
+  color: #2d3748;
+  transition: all 0.15s ease;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.preset-btn:hover {
+  border-color: #667eea;
+  background: #f7fafc;
+  transform: translateX(2px);
+}
+.preset-btn:active {
+  transform: translateX(2px) scale(0.98);
+}
+.preset-emoji {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.preset-label {
+  flex: 1;
+}
+
+/* ───── 複製分享連結按鈕 ───── */
+.copy-share-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #667eea;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(102, 126, 234, 0.39);
+  transition: all 0.2s;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.copy-share-btn:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px 0 rgba(102, 126, 234, 0.5);
+}
+.copy-share-btn:active {
+  transform: scale(0.98);
+}
+.copy-share-btn.copied {
+  background: #48bb78;
+  box-shadow: 0 4px 14px 0 rgba(72, 187, 120, 0.4);
+}
+
+/* ───── 結果列表（正規單位、CO₂）───── */
+.result-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid #edf2f7;
+  border-radius: 12px;
+  transition: box-shadow 0.18s ease;
+}
+.result-row:hover {
+  box-shadow: 0 4px 12px rgba(31, 38, 135, 0.08);
+}
+.result-label {
+  font-size: 14px;
+  color: #4a5568;
+  font-weight: 500;
+}
+.result-value-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 0;
+}
+.result-value {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1a202c;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+.result-suffix {
+  font-size: 12px;
+  color: #a0aec0;
+  margin-left: 4px;
+}
+.chinese-unit {
+  font-size: 12px;
+  color: #a0aec0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.chinese-unit:empty {
+  display: none;
+}
+
+/* ───── 譬喻卡片格 ───── */
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+.fun-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: #fff;
+  border: 1px solid #edf2f7;
+  border-radius: 14px;
+  transition: all 0.18s ease;
+}
+.fun-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e0;
+  box-shadow: 0 8px 20px rgba(31, 38, 135, 0.12);
+}
+.fun-card:hover .fun-emoji {
+  transform: scale(1.12);
+}
+.fun-emoji {
+  font-size: 28px;
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.18s ease;
+}
+.fun-text {
+  flex: 1;
+  min-width: 0;
+}
+.fun-label {
+  font-size: 13px;
+  color: #718096;
+  margin-bottom: 2px;
+}
+.fun-value {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a202c;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.2;
+}
+.fun-suffix {
+  font-size: 12px;
+  font-weight: 400;
+  color: #a0aec0;
+  margin-left: 4px;
+}
+.fun-card .chinese-unit:not(:empty) {
+  margin-top: 2px;
+  display: block;
+}
+
+/* ───── Override 標記 ───── */
+.override-mark {
+  font-size: 12px;
+  color: #ed8936;
+  cursor: help;
+  margin-left: 4px;
+}
+.has-override {
+  border-color: #fbd38d;
+}
+.has-override:hover {
+  border-color: #ed8936;
+}
+
+/* ───── CO₂ 子卡：稍小、稍淡 ───── */
+.co2-card .section-title {
+  font-size: 14px;
+  color: #4a5568;
+}
+.co2-row {
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+  border-color: #c6f6d5;
+}
+.co2-row .result-value {
+  color: #276749;
+}
+
+/* ───── Footer ───── */
+.page-footer {
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  opacity: 0.8;
+  padding: 24px 0 8px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.page-footer a {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+.page-footer a:hover {
+  text-decoration-color: #fff;
+}
+
+/* ───── 細節：捲軸樣式 ───── */
+.preset-list::-webkit-scrollbar {
+  width: 6px;
+}
+.preset-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.preset-list::-webkit-scrollbar-thumb {
+  background: rgba(160, 174, 192, 0.4);
+  border-radius: 3px;
+}
+.preset-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 174, 192, 0.7);
+}

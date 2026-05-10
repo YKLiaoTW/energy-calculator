@@ -1,0 +1,13 @@
+﻿key,label,emoji,kgCO2_per_TJ,source,archive_path
+# ─── CO₂ 排放係數 ───────────────────────────────────
+# 全部數值來自：IPCC 2006 Guidelines for National Greenhouse Gas Inventories,
+# Vol.2 Energy, Ch.1 Introduction, Table 1.4 (Default emission factors for stationary combustion)
+# Reference/REFERENCES.md 有完整 APA 引用
+subbituminous,亞煙煤,🪨,96100,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf
+natural_gas,天然氣,💨,56100,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf
+bituminous,煙煤,🪨,94600,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf
+gasoline,汽油,⛽,69300,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf
+lpg,液化石油氣,🛢️,63100,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf
+heavy_oil,重油（殘渣油）,🛢️,77400,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf
+light_oil,輕油,🛢️,74100,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf
+diesel,柴油,⛽,74100,https://www.ipcc-nggip.iges.or.jp/public/2006gl/,Reference/gov/IPCC_2006_Vol2_Ch1_emission_factors.pdf

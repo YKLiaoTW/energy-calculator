@@ -2,7 +2,12 @@
   "permissions": {
     "allow": [
       "Bash(python *)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(unzip -l \"能量計算機.xlsx\")",
+      "Bash(unzip -p \"能量計算機.xlsx\" xl/sharedStrings.xml)",
+      "Bash(unzip -p \"能量計算機.xlsx\" xl/worksheets/sheet1.xml)",
+      "Bash(unzip -p \"能量計算機.xlsx\" xl/worksheets/sheet2.xml)",
+      "PowerShell(Get-Content *)"
     ]
   }
 }
