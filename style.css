@@ -136,6 +136,44 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+/* ───── 地震規模快速輸入面板 ───── */
+.eq-panel {
+  margin-top: 24px;
+  padding: 16px;
+  background: linear-gradient(135deg, #fffaf0 0%, #fff5eb 100%);
+  border: 1px solid #fbd38d;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(237, 137, 54, 0.08);
+}
+.eq-title {
+  color: #c05621 !important;
+  margin-top: 0 !important;
+  margin-bottom: 12px !important;
+  font-size: 15px !important;
+}
+.eq-panel .input-row {
+  margin-bottom: 10px;
+}
+.eq-panel .input-row:last-of-type {
+  margin-bottom: 0;
+}
+.eq-panel input,
+.eq-panel select {
+  border-color: #fbd38d;
+  background: #fff;
+}
+.eq-panel input:focus,
+.eq-panel select:focus {
+  border-color: #ed8936;
+}
+.eq-hint {
+  font-size: 11px;
+  color: #c05621;
+  opacity: 0.7;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
 /* ───── 預設按鈕 ───── */
 .preset-list {
   display: flex;

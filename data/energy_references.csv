@@ -1,75 +1,132 @@
 ﻿key,label,emoji,joulesEach,note,override,source,original_value,archive_path
-# ─── 譬喻單位：每一個 = 多少焦耳（J）───────────────────
+# ─── 能量參考依據總表（譬喻單位 = 多少焦耳 J）───────────────
 # 欄位：joulesEach 接受單值或區間（X~Y）；archive_path 指向 Reference/ 內的本地檔
-# 學術引用請見 Reference/REFERENCES.md（含 APA 7th 完整書目）
-# 找不到 PDF 的學術文獻列在 Reference/PENDING_DOWNLOADS.md，待人工取得後存入 Reference/papers/
-# ─── 營養午餐（5 級，依教育部國教署「學校午餐建議熱量範圍」）─
+# 學術引用見 Reference/REFERENCES.md（含 APA 7th 完整書目 + 中文翻譯）
+# 待人工取得的 PDF 列在 Reference/PENDING_DOWNLOADS.md
+# 條目順序：A 食物 → B 運動 → C 家電 → D 交通 → E 燃料 → F 發電 → G 武器 → H 災害 → I 地震 → J 自然/工程 → K 微觀/宇宙
+#
+# ═══════════════════════════════════════════════════════════════════════
+# A. 食物熱量（5 級營養午餐 + 4 個常見點心）
+# ═══════════════════════════════════════════════════════════════════════
+# 依教育部國教署「學校午餐建議熱量範圍」109.12.28 修訂版
 lunch_es_low,營養午餐（國小1-3）,🍱,2594080~3012480,熱量區間 620~720 kcal × 4184 J/kcal,,https://fatraceschool.k12ea.gov.tw/newsattachfiles/4821,620~720 kcal,Reference/gov/MOE_school_lunch_attached_4821.pdf
 lunch_es_high,營養午餐（國小4-6）,🍱,3012480~3472720,熱量區間 720~830 kcal,,https://fatraceschool.k12ea.gov.tw/newsattachfiles/4821,720~830 kcal,Reference/gov/MOE_school_lunch_attached_4821.pdf
 lunch_jh,營養午餐（國中）,🍱,3347200~3891120,熱量區間 800~930 kcal,,https://fatraceschool.k12ea.gov.tw/newsattachfiles/4821,800~930 kcal,Reference/gov/MOE_school_lunch_attached_4821.pdf
 lunch_hs_m,營養午餐（高中男）,🍱,3765600~4393200,熱量區間 900~1050 kcal,,https://fatraceschool.k12ea.gov.tw/newsattachfiles/4821,900~1050 kcal,Reference/gov/MOE_school_lunch_attached_4821.pdf
 lunch_hs_f,營養午餐（高中女）,🍱,2845120~3389040,熱量區間 680~810 kcal,,https://fatraceschool.k12ea.gov.tw/newsattachfiles/4821,680~810 kcal,Reference/gov/MOE_school_lunch_attached_4821.pdf
-# ─── 武器 / 大事件（已對 Wikipedia/權威來源校驗 2026-05）────
-moab,美國「炸彈之母」MOAB,💣,4.6024e10,11 噸 TNT 當量爆炸威力（原值 8.31e13 高出約 1800 倍 已修正）,true,https://en.wikipedia.org/wiki/GBU-43/B_MOAB,11 ton TNT,Reference/web/wiki_gbu43_moab.html
-foab,蘇聯「炸彈之父」FOAB,💣,1.84e11,44 噸 TNT 當量 ≈ 180 GJ（原值 4.5e14 過高 已修正）,true,https://en.wikipedia.org/wiki/Father_of_All_Bombs,44 ton TNT,Reference/web/wiki_father_of_all_bombs.html
-gbu-57,GBU-57 鑽地彈,💣,1.464e10,3~4 噸 TNT 爆炸當量（破壞主要靠動能與鑽地）原值 1.8e14 過高 已修正,true,https://en.wikipedia.org/wiki/GBU-57A/B_MOP,3-4 ton TNT,Reference/web/wiki_gbu57_mop.html
-trinity,第一顆核彈試爆 Trinity,☢️,8.7864e13,21 kt TNT 官方估計值 ≈ 88 TJ（原值 2.1e13 偏低 已修正）,true,https://doi.org/10.1080/00295450.2021.1932176,21 kt TNT,Reference/papers/Selby_2021_Trinity_yield.pdf
-hiroshima,廣島核彈,☢️,6.6944e13,16 kt TNT,,https://en.wikipedia.org/wiki/Little_Boy,16 kt TNT,Reference/web/wiki_little_boy.html
-nagasaki,長崎核彈,☢️,8.7864e13,21 ± 2 kt TNT 官方值（原值 1.21e14 略高 已修正）,true,https://en.wikipedia.org/wiki/Fat_Man,21 kt TNT,Reference/web/wiki_fat_man.html
-tsar,沙皇氫彈,☢️,2.092e17,50 Mt TNT 當量,,http://www.nuclearweaponarchive.org/Russia/TsarBomba.html,50 Mt TNT,Reference/web/nuclearweaponarchive_tsar_bomba.html
-guantang_lng,中油觀塘 LNG 槽爆炸（環團預估）,🔥,3.38904e14,81000 噸 TNT（環團預估）,,https://www.ctwant.com/article/49684,81000 ton TNT,Reference/web/ctwant_49684_guantang_lng_8wan_ton.html
-kaohsiung_explosion,2014 高雄氣爆,🔥,4.6e11,~10 噸丙烯外洩之化學能 ≈ 110 噸 TNT 化學當量（實際爆震釋放小於此） 最佳估計值,true,https://zh.wikipedia.org/wiki/2014%E5%B9%B4%E9%AB%98%E9%9B%84%E6%B0%A3%E7%88%86%E4%BA%8B%E6%95%85,~10 ton 丙烯,Reference/web/zhwiki_2014_kaohsiung_explosion.html
-ba_xian_dust,2015 八仙塵爆,🔥,9.5e8,粗估 ~50 kg 玉米澱粉燃燒（45 g/m³ × 約 1250 m³）× 17 MJ/kg 最佳估計值,true,https://zh.wikipedia.org/wiki/%E5%85%AB%E4%BB%99%E6%A8%82%E5%9C%92%E5%BD%A9%E8%89%B2%E6%B4%BE%E5%B0%8D%E7%81%AB%E7%81%BD,~50 kg 玉米粉,Reference/web/zhwiki_2015_baxian_dust_explosion.html
-# ─── 食物 ─────────────────────────────────────────────
-banana,香蕉一根,🍌,370000,,,http://www.i-fit.com.tw/context/419.html,~89 kcal,Reference/web/ifit_banana_calorie.html
-suncake,太陽餅一個,🌞,1046025,,,https://consumer.fda.gov.tw/Food/TFND.aspx,~250 kcal,Reference/web/consumer_fda_food_nutrient_db.html
-pineapple_cake,鳳梨酥一個,🍍,920502,,,https://consumer.fda.gov.tw/Food/TFND.aspx,~220 kcal,Reference/web/consumer_fda_food_nutrient_db.html
-hualien_yam,花蓮薯一個,🍠,502092,,,,~120 kcal,Reference/web/consumer_fda_food_nutrient_db.html
-# ─── 運動 / 人體（label 含逗號 已用引號包；MET 值依 Ainsworth 2011 Compendium）─
-jog_hr,"慢跑 1 小時（60kg, 8km/h）",🏃,2008320~2510400,~480~600 kcal/hr 區間（中等強度跑步 8~10 MET）,,https://doi.org/10.1249/MSS.0b013e31821ece12,480~600 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
-jog_km,"慢跑 1 km（60kg, 8km/h）",🏃,251040~313800,jog_hr × 1/8 hr,,https://doi.org/10.1249/MSS.0b013e31821ece12,60~75 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
-swim_hr,"游泳 1 小時（60kg, 中等強度）",🏊,1506240~2510400,~360~600 kcal/hr 區間（自由式 6~10 MET）,true,https://doi.org/10.1249/MSS.0b013e31821ece12,360~600 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
-swim_km,"游泳 1 km（60kg, 中等強度）",🏊,627600~1004160,以 2 km/hr 計（中等強度自由式）,true,https://doi.org/10.1249/MSS.0b013e31821ece12,150~240 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
-cycle_hr,"騎腳踏車 1 小時（60kg, 16km/h）",🚴,1506240,~360 kcal（6 MET light cycling）,,https://doi.org/10.1249/MSS.0b013e31821ece12,~360 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
-cycle_km,"騎腳踏車 1 km（60kg, 16km/h）",🚴,94140,cycle_hr × 1/16 hr,,https://doi.org/10.1249/MSS.0b013e31821ece12,~22.5 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
-triathlon_full,鐵人三項全程（60kg）,🏅,3.55e7,3.86 km 游 + 180 km 騎 + 42.2 km 跑（原值 1.5e10 高估約 470 倍 已修正）,true,https://en.wikipedia.org/wiki/Ironman_Triathlon,~8500 kcal,Reference/web/wiki_ironman_triathlon.html
-triathlon_half,鐵人三項半程（60kg）,🏅,1.78e7,標準 113 km 半程粗估（原值 7.5e9 過高 已修正）,true,https://en.wikipedia.org/wiki/Ironman_70.3,~4250 kcal,Reference/web/wiki_ironman_703.html
-marathon,馬拉松 42.195 km（60kg）,🏃,1.267e7,jog_km × 42.195（原值 1.265e9 高出 100 倍 已修正）,true,https://en.wikipedia.org/wiki/Marathon,~3000 kcal,Reference/web/wiki_marathon.html
-marathon_half,半程馬拉松 21.0975 km（60kg）,🏃,6.336e6,jog_km × 21.0975（原值 6.325e8 高出 100 倍 已修正）,true,https://en.wikipedia.org/wiki/Half_marathon,~1500 kcal,Reference/web/wiki_half_marathon.html
-fat_kg,脂肪 1 kg,🥓,37656000,9000 kcal × 4184（Hall 2008 IJO 文獻指出實際範圍 6700~9000 kcal/kg）,,https://doi.org/10.1038/sj.ijo.0803720,9000 kcal,Reference/papers/Hall_2008_fat_energy_per_kg.pdf
-# ─── 發電 / 燃料 ─────────────────────────────────────
-taichung_hr,台中火力電廠 1 小時滿載發電,🏭,2.0808e13,5780 MW × 1 hr,,http://www.taipower.com.tw,5780 MWh,Reference/web/zhwiki_datan_power_plant.html
-taoyuan_hr,桃園大潭燃氣電廠 1 小時滿載發電,🏭,2.7160e13,7544.571 MW × 1 hr（裝置容量峰值，實際容量因數約 70~80%）,,https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%BD%AD%E7%99%BC%E9%9B%BB%E5%BB%A0,7544.571 MWh,Reference/web/zhwiki_datan_power_plant.html
-nuke4_hr,核四 1 小時滿載發電,⚡,9.72e12,2700 MW（單機）× 1 hr,,https://www.taipower.com.tw,2700 MWh,Reference/web/zhwiki_datan_power_plant.html
-solar_2025_year,2025 全年臺灣太陽光電發電量,☀️,5.751e16,159.75 億度（15.975 TWh）2025 全年加總,,https://www.moeaea.gov.tw/,15.975 TWh,Reference/web/moeaea_renewable_energy_statistics.html
-wind_2025_year,2025 全年臺灣風力發電量,🌬️,4.393e16,122.02 億度（12.202 TWh）2025 全年加總,,https://www.moeaea.gov.tw/,12.202 TWh,Reference/web/moeaea_renewable_energy_statistics.html
-hydro_2025_year,2025 全年臺灣慣常水力發電量,⚡,1.980e16,54.99 億度（5.499 TWh）2025 全年加總,,https://www.moeaea.gov.tw/,5.499 TWh,Reference/web/moeaea_renewable_energy_statistics.html
-laptop_hr,筆電 65W 用 1 小時,💻,234000,65 W × 3600 s,,,~0.065 kWh,
-gasoline_l,汽油燃燒 1 公升,⛽,32635983,~7800 kcal/L,,,~32.6 MJ/L,
-lng_l,LNG 1 公升液態,🛢️,25000000,xlsx 9000 cal/L 顯為誤植 採真實 LNG 液態熱值 25 MJ/L,true,https://en.wikipedia.org/wiki/Liquefied_natural_gas,~25 MJ/L,Reference/web/wiki_liquefied_natural_gas.html
-u235_g,U-235 1 公克核分裂,⚛️,8.314e10,,,https://en.wikipedia.org/wiki/Uranium-235,~8.3e10 J/g,Reference/web/wiki_uranium_235.html
-# ─── 自然 / 宇宙 ─────────────────────────────────────
-solar_earth_hr,太陽 1 小時送到地球,☀️,6.264e20,60×60×1.74e17（Kopp & Lean 2011 GRL 修正太陽常數為 1361 W/m²）,,https://doi.org/10.1029/2010GL045777,1.74e17 W,Reference/papers/Kopp_Lean_2011_solar_irradiance.pdf
-solar_m2_hr,地表 1 m² 1 小時日照,🌤️,4898880,1360.8 W/m² × 3600 s（太陽常數 Kopp & Lean 2011）,,https://doi.org/10.1029/2010GL045777,1360.8 W/m²,Reference/papers/Kopp_Lean_2011_solar_irradiance.pdf
-amaterasu,天照大神粒子 1 顆,✨,38.4522351,2.4e20 eV / (6.24151e18 eV/J)（Telescope Array 2023 Science 發表）,,https://doi.org/10.1126/science.abo5095,2.4e20 eV,Reference/papers/TelescopeArray_2023_Amaterasu_arxiv.pdf
-# ─── 微觀粒子 ─────────────────────────────────────────
-lhc_proton,LHC 質子單顆能量（6.8 TeV/proton）,💠,1.089e-6,6.8e12 eV × 1.602e-19 J/eV ≈ 1 微焦耳/質子,,https://en.wikipedia.org/wiki/Large_Hadron_Collider,6.8 TeV,Reference/web/wiki_large_hadron_collider.html
-# ─── 日常電子 / 家電（補 1e4~1e7 J 級距）───────────────
-iphone_charge,iPhone 15 Pro 充滿電,📱,45720,12.7 Wh × 3600 s,,https://www.macworld.com/article/678413/iphone-battery-capacities-compared-all-iphones-battery-life-in-mah-and-wh.html,12.7 Wh,Reference/web/macworld_iphone_battery_capacities.html
-kettle_boil,1.7 L 電熱水壺燒一壺水,🫖,972000,實測約 0.27 kWh（含保溫損耗）,,https://www.hk01.com/數碼生活/562837/,0.27 kWh,
+# ─── 點心（食藥署 TFND 食品營養成分資料庫）─────────────────
+banana,香蕉一根,🍌,370000,~89 kcal,,http://www.i-fit.com.tw/context/419.html,~89 kcal,Reference/web/ifit_banana_calorie.html
+hualien_yam,花蓮薯一個,🍠,502092,~120 kcal,,https://consumer.fda.gov.tw/Food/TFND.aspx,~120 kcal,Reference/web/consumer_fda_food_nutrient_db.html
+pineapple_cake,鳳梨酥一個,🍍,920502,~220 kcal,,https://consumer.fda.gov.tw/Food/TFND.aspx,~220 kcal,Reference/web/consumer_fda_food_nutrient_db.html
+suncake,太陽餅一個,🌞,1046025,~250 kcal,,https://consumer.fda.gov.tw/Food/TFND.aspx,~250 kcal,Reference/web/consumer_fda_food_nutrient_db.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# B. 人體 / 運動（基礎代謝 → 脂肪 → 跑/騎/游 → 馬拉松/鐵人）
+# ═══════════════════════════════════════════════════════════════════════
+# 運動熱量採 Ainsworth 2011 Compendium MET 值；身體脂肪採 Hall 2008
 human_bmr_day,人體 1 日基礎代謝（70 kg 成人）,💪,6900000,1650 kcal × 4184（≈ 80 W × 86400 s）,,https://en.wikipedia.org/wiki/Basal_metabolic_rate,1650 kcal,Reference/web/wiki_basal_metabolic_rate.html
+fat_kg,脂肪 1 kg,🥓,37656000,9000 kcal × 4184（Hall 2008 IJO 文獻指出實際範圍 6700~9000 kcal/kg）,,https://doi.org/10.1038/sj.ijo.0803720,9000 kcal,Reference/papers/Hall_2008_fat_energy_per_kg.pdf
+# ─── 跑步（label 含逗號 已用引號包）───────────
+jog_km,"慢跑 1 km（60kg, 8km/h）",🏃,251040~313800,jog_hr × 1/8 hr,,https://doi.org/10.1249/MSS.0b013e31821ece12,60~75 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
+jog_hr,"慢跑 1 小時（60kg, 8km/h）",🏃,2008320~2510400,~480~600 kcal/hr 區間（中等強度跑步 8~10 MET）,,https://doi.org/10.1249/MSS.0b013e31821ece12,480~600 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
+# ─── 騎腳踏車 ───────────
+cycle_km,"騎腳踏車 1 km（60kg, 16km/h）",🚴,94140,cycle_hr × 1/16 hr,,https://doi.org/10.1249/MSS.0b013e31821ece12,~22.5 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
+cycle_hr,"騎腳踏車 1 小時（60kg, 16km/h）",🚴,1506240,~360 kcal（6 MET light cycling）,,https://doi.org/10.1249/MSS.0b013e31821ece12,~360 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
+# ─── 游泳 ───────────
+swim_km,"游泳 1 km（60kg, 中等強度）",🏊,627600~1004160,以 2 km/hr 計（中等強度自由式）,true,https://doi.org/10.1249/MSS.0b013e31821ece12,150~240 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
+swim_hr,"游泳 1 小時（60kg, 中等強度）",🏊,1506240~2510400,~360~600 kcal/hr 區間（自由式 6~10 MET）,true,https://doi.org/10.1249/MSS.0b013e31821ece12,360~600 kcal,Reference/papers/Ainsworth_2011_compendium.pdf
+# ─── 馬拉松 ───────────
+marathon_half,半程馬拉松 21.0975 km（60kg）,🏃,6.336e6,jog_km × 21.0975,true,https://en.wikipedia.org/wiki/Half_marathon,~1500 kcal,Reference/web/wiki_half_marathon.html
+marathon,馬拉松 42.195 km（60kg）,🏃,1.267e7,jog_km × 42.195,true,https://en.wikipedia.org/wiki/Marathon,~3000 kcal,Reference/web/wiki_marathon.html
+# ─── 鐵人三項 ───────────
+triathlon_half,鐵人三項半程（60kg）,🏅,1.78e7,標準 113 km 半程粗估,true,https://en.wikipedia.org/wiki/Ironman_70.3,~4250 kcal,Reference/web/wiki_ironman_703.html
+triathlon_full,鐵人三項全程（60kg）,🏅,3.55e7,3.86 km 游 + 180 km 騎 + 42.2 km 跑,true,https://en.wikipedia.org/wiki/Ironman_Triathlon,~8500 kcal,Reference/web/wiki_ironman_triathlon.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# C. 日常電子 / 家電（手機 → 筆電 → 熱水壺 → 冷氣）
+# ═══════════════════════════════════════════════════════════════════════
+iphone_charge,iPhone 15 Pro 充滿電,📱,45720,12.7 Wh × 3600 s,,https://www.macworld.com/article/678413/iphone-battery-capacities-compared-all-iphones-battery-life-in-mah-and-wh.html,12.7 Wh,Reference/web/macworld_iphone_battery_capacities.html
+laptop_hr,筆電 65W 用 1 小時,💻,234000,65 W × 3600 s,,,~0.065 kWh,
+kettle_boil,1.7 L 電熱水壺燒一壺水,🫖,972000,實測約 0.27 kWh（含保溫損耗）,,https://www.hk01.com/數碼生活/562837/,0.27 kWh,
 ac_3500w_hr,家用冷氣 3.5 kW 滿載 1 小時,❄️,12600000,3.5 kWh × 3.6e6 J/kWh,,https://pstw.panasonic.com.tw/FAQ/Article/1202,3.5 kWh,
-# ─── 交通運輸（補 1e8~1e10 J 級距）─────────────────────
+#
+# ═══════════════════════════════════════════════════════════════════════
+# D. 交通運輸（機車 → 電動車 → 高鐵）
+# ═══════════════════════════════════════════════════════════════════════
 moto_125_100km,"機車跑 100 km（125cc, ~30 km/L）",🛵,108000000,3.33 L × 32.6 MJ/L = 約 109 MJ,,https://auto.itri.org.tw/iv_general_qry.aspx,3.33 L 汽油,
 tesla_m3_full,"Tesla Model 3 電池充滿（75 kWh, Long Range）",🔋,270000000,75 kWh × 3.6e6 J/kWh,,https://en.wikipedia.org/wiki/Tesla_Model_3,75 kWh,Reference/web/wiki_tesla_model_3.html
 hsr_tpe_khh,高鐵台北→高雄一趟（一列車）,🚄,34362000000,9545 kWh × 3.6e6 J/kWh（2012 年資料 27.67 度/km × 345 km）,,https://lowestc.blogspot.com/2013/12/05.html,9545 kWh,Reference/web/lowestc_hsr_energy_consumption_2013.html
-# ─── 自然 / 工程（中級距）─────────────────────────────
+#
+# ═══════════════════════════════════════════════════════════════════════
+# E. 燃料（依能量密度遞增：LNG → 汽油 → U-235）
+# ═══════════════════════════════════════════════════════════════════════
+
+charcoal_kg,木炭燃燒 1 公斤,🔥,30000000,約 29 MJ/kg（依木炭種類與水分含量不同而有變化）,,https://en.wikipedia.org/wiki/Charcoal,~29 MJ/kg,Reference/web/wiki_charcoal.html
+gasoline_l,汽油燃燒 1 公升,⛽,32635983,~7800 kcal/L,,,~32.6 MJ/L,
+lpg,液化石油氣 LPG 1 公升,🛢️,37864900,~37.86 MJ/L（液態 LPG 典型值；液化石油氣丙烷 25.5 MJ/L、丁烷 28 MJ/L、混合與壓縮狀態會偏高）,,https://en.wikipedia.org/wiki/Liquefied_petroleum_gas,~37.86 MJ/L,
+lng_l,LNG 1 公升液態,🛢️,25000000,xlsx 9000 cal/L 顯為誤植 採真實 LNG 液態熱值 25 MJ/L,true,https://en.wikipedia.org/wiki/Liquefied_natural_gas,~25 MJ/L,Reference/web/wiki_liquefied_natural_gas.html
+u235_g,U-235 1 公克核分裂,⚛️,8.314e10,核分裂釋放能量 ≈ 2 MeV/nucleon,,https://en.wikipedia.org/wiki/Uranium-235,~8.3e10 J/g,Reference/web/wiki_uranium_235.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# F. 發電（1 小時滿載 → 全年總發電量）
+# ═══════════════════════════════════════════════════════════════════════
+nuke4_hr,核四 1 小時滿載發電,⚛️,9.72e12,2700 MW（單機）× 1 hr,,https://www.taipower.com.tw,2700 MWh,Reference/web/zhwiki_datan_power_plant.html
+taichung_hr,台中火力電廠 1 小時滿載發電,🏭,2.0808e13,5780 MW × 1 hr,,http://www.taipower.com.tw,5780 MWh,Reference/web/zhwiki_datan_power_plant.html
+taoyuan_hr,桃園大潭燃氣電廠 1 小時滿載發電,🏭,2.7160e13,7544.571 MW × 1 hr（裝置容量峰值，實際容量因數約 70~80%）,,https://zh.wikipedia.org/wiki/%E5%A4%A7%E6%BD%AD%E7%99%BC%E9%9B%BB%E5%BB%A0,7544.571 MWh,Reference/web/zhwiki_datan_power_plant.html
+hydro_2025_year,2025 全年臺灣慣常水力發電量,💧,1.980e16,54.99 億度（5.499 TWh）2025 全年加總,,https://www.moeaea.gov.tw/,5.499 TWh,Reference/web/moeaea_renewable_energy_statistics.html
+wind_2025_year,2025 全年臺灣風力發電量,🌬️,4.393e16,122.02 億度（12.202 TWh）2025 全年加總,,https://www.moeaea.gov.tw/,12.202 TWh,Reference/web/moeaea_renewable_energy_statistics.html
+solar_2025_year,2025 全年臺灣太陽光電發電量,🔆,5.751e16,159.75 億度（15.975 TWh）2025 全年加總,,https://www.moeaea.gov.tw/,15.975 TWh,Reference/web/moeaea_renewable_energy_statistics.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# G. 武器（依當量遞增：鑽地 → 鋁熱 → 原子 → 熱核）
+# ═══════════════════════════════════════════════════════════════════════
+gbu-57,GBU-57 鑽地彈,💣,1.464e10,3~4 噸 TNT 爆炸當量（破壞主要靠動能與鑽地）,true,https://en.wikipedia.org/wiki/GBU-57A/B_MOP,3-4 ton TNT,Reference/web/wiki_gbu57_mop.html
+moab,美國「炸彈之母」MOAB,💣,4.6024e10,11 噸 TNT 當量爆炸威力,true,https://en.wikipedia.org/wiki/GBU-43/B_MOAB,11 ton TNT,Reference/web/wiki_gbu43_moab.html
+foab,蘇聯「炸彈之父」FOAB,💣,1.84e11,44 噸 TNT 當量 ≈ 180 GJ,true,https://en.wikipedia.org/wiki/Father_of_All_Bombs,44 ton TNT,Reference/web/wiki_father_of_all_bombs.html
+hiroshima,廣島核彈,☢️,6.6944e13,16 kt TNT,,https://en.wikipedia.org/wiki/Little_Boy,16 kt TNT,Reference/web/wiki_little_boy.html
+trinity,第一顆核彈試爆 Trinity,☢️,8.7864e13,21 kt TNT 官方估計值 ≈ 88 TJ,true,https://doi.org/10.1080/00295450.2021.1932176,21 kt TNT,Reference/papers/Selby_2021_Trinity_yield.pdf
+nagasaki,長崎核彈,☢️,8.7864e13,21 ± 2 kt TNT 官方值,true,https://en.wikipedia.org/wiki/Fat_Man,21 kt TNT,Reference/web/wiki_fat_man.html
+castle_bravo,1954 Castle Bravo 美國最大核試,🍄,6.276e16,15 Mt TNT（預期 6 Mt 因鋰-7 反應失控放大 2.5 倍）,,https://en.wikipedia.org/wiki/Castle_Bravo,15 Mt TNT,Reference/web/wiki_castle_bravo.html
+tsar,沙皇氫彈,☢️,2.092e17,50 Mt TNT 當量,,http://www.nuclearweaponarchive.org/Russia/TsarBomba.html,50 Mt TNT,Reference/web/nuclearweaponarchive_tsar_bomba.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# H. 災害 / 爆炸事件（依規模遞增：塵爆 → 氣爆 → LNG → 隕石空爆）
+# ═══════════════════════════════════════════════════════════════════════
+ba_xian_dust,2015 八仙塵爆,🔥,9.5e8,粗估 ~50 kg 玉米澱粉燃燒（45 g/m³ × 約 1250 m³）× 17 MJ/kg 最佳估計值,true,https://zh.wikipedia.org/wiki/%E5%85%AB%E4%BB%99%E6%A8%82%E5%9C%92%E5%BD%A9%E8%89%B2%E6%B4%BE%E5%B0%8D%E7%81%AB%E7%81%BD,~50 kg 玉米粉,Reference/web/zhwiki_2015_baxian_dust_explosion.html
+kaohsiung_explosion,2014 高雄氣爆,🔥,4.6e11,~10 噸丙烯外洩之化學能 ≈ 110 噸 TNT 化學當量（實際爆震釋放小於此） 最佳估計值,true,https://zh.wikipedia.org/wiki/2014%E5%B9%B4%E9%AB%98%E9%9B%84%E6%B0%A3%E7%88%86%E4%BA%8B%E6%95%85,~10 ton 丙烯,Reference/web/zhwiki_2014_kaohsiung_explosion.html
+beirut_2020,2020 貝魯特港爆炸,💥,5.44e11~8.37e12,Pilger 2021 多技術估計 0.13~2 kt TNT（2750 噸 NH4NO3 引爆）,,https://doi.org/10.1038/s41598-021-93690-y,0.13~2 kt TNT,Reference/papers/Pilger_2021_Beirut_yield.pdf
+guantang_lng,中油觀塘 LNG 槽爆炸（環團預估）,🔥,3.38904e14,81000 噸 TNT（環團預估）,,https://www.ctwant.com/article/49684,81000 ton TNT,Reference/web/ctwant_49684_guantang_lng_8wan_ton.html
+tunguska_1908,1908 通古斯隕石空爆,☄️,1.255e16~2.092e17,估計範圍 3~50 Mt TNT（最常引用 ~15 Mt）,true,https://en.wikipedia.org/wiki/Tunguska_event,3~50 Mt TNT,Reference/web/wiki_tunguska_event.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# I. 地震（歷史地震事件，依規模換算為 J；公式採 Gutenberg-Richter 與 Hanks-Kanamori）
+# ═══════════════════════════════════════════════════════════════════════
+# Richter ML：J = 10^(11.8 + 1.5×ML) / 1e7
+# Hanks-Kanamori Mw：J = 10^(1.5×Mw + 4.8)
+eq_meinong_2016,2016 高雄美濃地震（ML 6.6）,🇹🇼,5.012e14,Richter ML 6.6 → 10^(11.8+1.5×6.6)/1e7,,https://zh.wikipedia.org/wiki/2016年高雄美濃地震,ML 6.6,Reference/web/zhwiki_meinong_eq_2016.html
+eq_hualien_0206_2018,2018 0206 花蓮地震（Mw 6.4）,🇹🇼,2.512e14,Hanks-Kanamori Mw 6.4 → 10^(1.5×6.4+4.8),,https://zh.wikipedia.org/wiki/2018年花蓮地震,Mw 6.4,Reference/web/zhwiki_hualien_eq_2018.html
+eq_hualien_0403_2024,2024 0403 花蓮地震（ML 7.1）,🇹🇼,2.818e15,Richter ML 7.1 → 10^(11.8+1.5×7.1)/1e7,,https://zh.wikipedia.org/wiki/2024年花蓮地震,ML 7.1,Reference/web/zhwiki_hualien_eq_2024.html
+eq_jiji_1999,1999 集集 921 大地震（ML 7.3）,🇹🇼,5.623e15,Richter ML 7.3 → 10^(11.8+1.5×7.3)/1e7（CWA 主流引用值；USGS Mw 7.6 約 7.94e15 J）,,https://zh.wikipedia.org/wiki/集集大地震,ML 7.3,Reference/web/zhwiki_jiji_eq_1999.html
+eq_noto_2024,2024 能登半島地震（Mw 7.5）,🇯🇵,1.122e16,Hanks-Kanamori Mw 7.5 → 10^(1.5×7.5+4.8),,https://zh.wikipedia.org/wiki/2024年能登半島地震,Mw 7.5,Reference/web/zhwiki_noto_eq_2024.html
+eq_wenchuan_2008,2008 汶川大地震（Mw 8.3）,🌏,1.778e17,Hanks-Kanamori Mw 8.3 → 10^(1.5×8.3+4.8),,https://zh.wikipedia.org/wiki/2008年汶川大地震,Mw 8.3,Reference/web/zhwiki_wenchuan_eq_2008.html
+eq_tohoku_2011,2011 311 東日本大地震（Mw 9.1）,🌊,2.818e18,Hanks-Kanamori Mw 9.1 → 10^(1.5×9.1+4.8),,https://zh.wikipedia.org/wiki/2011年日本東北地方太平洋近海地震,Mw 9.1,Reference/web/zhwiki_tohoku_eq_2011.html
+eq_indianocean_2004,2004 南亞海嘯地震（Mw 9.2）,🌏,3.981e18,Hanks-Kanamori Mw 9.2 → 10^(1.5×9.2+4.8),,https://zh.wikipedia.org/wiki/2004年印度洋大地震,Mw 9.2,Reference/web/zhwiki_indianocean_eq_2004.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# J. 自然 / 工程（閃電 → 火箭 → 颱風）
+# ═══════════════════════════════════════════════════════════════════════
 lightning_avg,一道閃電（雲對地，平均）,🌩️,1e9~5e9,典型範圍 1~5 GJ（瞬間釋放，峰值功率達 TW 級）,,https://en.wikipedia.org/wiki/Lightning,1~5 GJ,Reference/web/wiki_lightning.html
 saturn_v_chem,Saturn V 火箭全燃料化學能,🚀,8.4e12,8.4 TJ（770000 L 煤油 + 1.2e6 L 液態氧 完全燃燒）,,https://en.wikipedia.org/wiki/Saturn_V,8.4 TJ,Reference/web/wiki_saturn_v.html
-# ─── 大型爆炸（補比廣島大的級距）───────────────────────
-beirut_2020,2020 貝魯特港爆炸,💥,5.44e11~8.37e12,Pilger 2021 多技術估計 0.13~2 kt TNT（2750 噸 NH4NO3 引爆）,,https://doi.org/10.1038/s41598-021-93690-y,0.13~2 kt TNT,Reference/papers/Pilger_2021_Beirut_yield.pdf
-castle_bravo,1954 Castle Bravo 美國最大核試,🍄,6.276e16,15 Mt TNT（預期 6 Mt 因鋰-7 反應失控放大 2.5 倍）,,https://en.wikipedia.org/wiki/Castle_Bravo,15 Mt TNT,Reference/web/wiki_castle_bravo.html
-tunguska_1908,1908 通古斯隕石空爆,☄️,1.255e16~2.092e17,估計範圍 3~50 Mt TNT（最常引用 ~15 Mt）,true,https://en.wikipedia.org/wiki/Tunguska_event,3~50 Mt TNT,Reference/web/wiki_tunguska_event.html
-# ─── 自然極端 / 宇宙級 ─────────────────────────────────
+falcon_9_block_5,SpaceX Falcon 9 Block 5 火箭全燃料化學能,🚀,1.7e12,約 1.7 TJ（約 500000 L 煤油 + 1.14e6 L 液態氧 完全燃燒）,,https://en.wikipedia.org/wiki/Falcon_9,1.7 TJ,Reference/web/wiki_falcon_9.html
+falcon_heavy,SpaceX Falcon Heavy 火箭全燃料化學能,🚀,5.1e12,約 5.1 TJ（約 1400000 L 煤油 + 3.4e6 L 液態氧 完全燃燒）,,https://en.wikipedia.org/wiki/Falcon_Heavy,5.1 TJ,Reference/web/wiki_falcon_heavy.html
+starship,SpaceX Starship 火箭全燃料化學能,🚀,1.7e13,約 17 TJ（約 1200000 L 煤油 + 1.7e6 L 液態氧 完全燃燒）,,https://en.wikipedia.org/wiki/SpaceX_Starship,17 TJ,Reference/web/wiki_spacex_starship.html
 typhoon_per_day,颱風一日總能量（凝結潛熱）,🌀,5.2e19,NOAA AOML：平均颶風一日凝結潛熱 = 200× 全球發電容量,,https://www.aoml.noaa.gov/hrd/tcfaq/D7.html,5.2e19 J/day,Reference/web/noaa_aoml_typhoon_faq_d7.html
+#
+# ═══════════════════════════════════════════════════════════════════════
+# K. 微觀 / 宇宙（從 1 微焦耳粒子到超新星，跨 50 個數量級）
+# ═══════════════════════════════════════════════════════════════════════
+lhc_proton,LHC 質子單顆能量（6.8 TeV/proton）,💠,1.089e-6,6.8e12 eV × 1.602e-19 J/eV ≈ 1 微焦耳/質子,,https://en.wikipedia.org/wiki/Large_Hadron_Collider,6.8 TeV,Reference/web/wiki_large_hadron_collider.html
+amaterasu,天照大神粒子 1 顆,✨,38.4522351,2.4e20 eV / (6.24151e18 eV/J)（Telescope Array 2023 Science 發表）,,https://doi.org/10.1126/science.abo5095,2.4e20 eV,Reference/papers/TelescopeArray_2023_Amaterasu_arxiv.pdf
+solar_m2_hr,地表 1 m² 1 小時日照,🌤️,4898880,1360.8 W/m² × 3600 s（太陽常數 Kopp & Lean 2011）,,https://doi.org/10.1029/2010GL045777,1360.8 W/m²,Reference/papers/Kopp_Lean_2011_solar_irradiance.pdf
+solar_earth_hr,太陽 1 小時送到地球,☀️,6.264e20,60×60×1.74e17（Kopp & Lean 2011 GRL 修正太陽常數為 1361 W/m²）,,https://doi.org/10.1029/2010GL045777,1.74e17 W,Reference/papers/Kopp_Lean_2011_solar_irradiance.pdf
 supernova_ia,Type Ia 超新星總能量（≈ 1 foe）,💫,1e44,1 foe = 10^44 J 為超新星標準能量單位（≈ 太陽 100 億年總輻射能）,,https://en.wikipedia.org/wiki/Type_Ia_supernova,1 foe = 10^44 J,Reference/web/wiki_type_ia_supernova.html

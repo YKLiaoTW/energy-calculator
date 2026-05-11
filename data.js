@@ -26,10 +26,24 @@ const STANDARD_UNITS = {
   ton_tnt: { label:'噸 TNT',           category:'standard', toJ:v=>v*J_PER_TON_TNT,    fromJ:j=>j/J_PER_TON_TNT },
   hp_s:    { label:'馬力·秒 hp·s',     category:'standard', toJ:v=>v*J_PER_HP_S,       fromJ:j=>j/J_PER_HP_S },
   // 地震規模（對數）
+  // 芮氏 ML（Gutenberg-Richter 1956）：log10(E_erg) = 11.8 + 1.5 ML
   richter: { label:'芮氏地震規模 ML',   category:'standard',
              toJ:  v => Math.pow(10, 11.8 + 1.5*v) / 1e7,
              fromJ:j => (Math.log10(j*1e7) - 11.8) / 1.5 },
+  // 表面波規模 Ms：與 ML 共用 Gutenberg-Richter 能量公式（量測波形不同 能量公式相同）
+  ms:      { label:'表面波規模 Ms',     category:'standard',
+             toJ:  v => Math.pow(10, 11.8 + 1.5*v) / 1e7,
+             fromJ:j => (Math.log10(j*1e7) - 11.8) / 1.5 },
+  // 體波規模 mb（Bath 1966）：log10(E_erg) = 5.8 + 2.4 mb；mb > 6 易飽和
+  mb:      { label:'體波規模 mb',       category:'standard',
+             toJ:  v => Math.pow(10, 2.4*v - 1.2),
+             fromJ:j => (Math.log10(j) + 1.2) / 2.4 },
+  // Hanks-Kanamori（USGS）：log10(E_J) = 4.8 + 1.5 Mw
   mw:      { label:'USGS 地震矩規模 Mw', category:'standard',
+             toJ:  v => Math.pow(10, 1.5*v + 4.8),
+             fromJ:j => (Math.log10(j) - 4.8) / 1.5 },
+  // 日本氣象廳規模 Mj：淺層 M 4.5~7.5 約等於 Mw 採 Hanks-Kanamori 估算
+  mj:      { label:'日本氣象廳規模 Mj (JMA)', category:'standard',
              toJ:  v => Math.pow(10, 1.5*v + 4.8),
              fromJ:j => (Math.log10(j) - 4.8) / 1.5 },
 };

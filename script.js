@@ -1,13 +1,15 @@
 import { loadData } from './data.js';
 
 // ───── DOM ─────────────────────────────────────────────
-const valueInput  = document.getElementById('value-input');
-const unitSelect  = document.getElementById('unit-select');
-const presetList  = document.getElementById('preset-list');
-const copyBtn     = document.getElementById('copy-share');
-const stdResults  = document.getElementById('standard-results');
-const funResults  = document.getElementById('fun-results');
-const co2Results  = document.getElementById('co2-results');
+const valueInput   = document.getElementById('value-input');
+const unitSelect   = document.getElementById('unit-select');
+const eqValueInput = document.getElementById('eq-value');
+const eqScaleSelect= document.getElementById('eq-scale');
+const presetList   = document.getElementById('preset-list');
+const copyBtn      = document.getElementById('copy-share');
+const stdResults   = document.getElementById('standard-results');
+const funResults   = document.getElementById('fun-results');
+const co2Results   = document.getElementById('co2-results');
 
 // ───── 全域：等 loadData() 後填入 ───────────────────────
 let UNITS = {};
@@ -175,6 +177,30 @@ function renderUnitSelect(){
   }
 }
 
+// 自動偵測 UNITS 內所有「地震規模」單位（標籤含「規模」）
+function renderEqScales(){
+  const scales = Object.entries(UNITS)
+    .filter(([k, u]) => u.category === 'standard' && /規模/.test(u.label))
+    .map(([k, u]) => ({ key: k, label: u.label }));
+  eqScaleSelect.innerHTML = '';
+  for (const s of scales){
+    const opt = document.createElement('option');
+    opt.value = s.key;
+    opt.textContent = s.label;
+    eqScaleSelect.appendChild(opt);
+  }
+}
+
+// 地震輸入 → 同步到主輸入並重算
+function onEqChange(){
+  const v = eqValueInput.value.trim();
+  const scale = eqScaleSelect.value;
+  if (v === '' || !UNITS[scale]) return;
+  unitSelect.value = scale;
+  valueInput.value = v;
+  recompute();
+}
+
 function renderPresets(){
   const byGroup = new Map();
   for (const p of PRESETS){
@@ -317,6 +343,13 @@ function recompute(){
     const cell = cellMap['co2_' + f.key];
     animateNumber(cell.main, cell.chinese, kg);
   }
+
+  // 反向同步到地震面板：主輸入若是地震規模，鏡像到 eq panel
+  const u = UNITS[inputKey];
+  if (u && u.category === 'standard' && /規模/.test(u.label)){
+    if (eqValueInput.value !== valueInput.value) eqValueInput.value = valueInput.value;
+    if (eqScaleSelect.value !== inputKey) eqScaleSelect.value = inputKey;
+  }
 }
 
 // ───── URL share round-trip ─────────────────────────
@@ -340,6 +373,8 @@ function buildShareUrl(){
 function bindEvents(){
   valueInput.addEventListener('input', recompute);
   unitSelect.addEventListener('change', recompute);
+  eqValueInput.addEventListener('input', onEqChange);
+  eqScaleSelect.addEventListener('change', onEqChange);
   copyBtn.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(buildShareUrl());
@@ -366,6 +401,7 @@ async function boot(){
     EMISSION_FACTORS = data.EMISSION_FACTORS;
 
     renderUnitSelect();
+    renderEqScales();
     renderPresets();
     renderResultSkeletons();
     bindEvents();

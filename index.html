@@ -32,6 +32,19 @@
           <select id="unit-select"></select>
         </div>
 
+        <section class="eq-panel" aria-label="地震規模快速輸入">
+          <h2 class="section-title eq-title">🌏 地震規模快速輸入</h2>
+          <div class="input-row">
+            <label for="eq-value">規模</label>
+            <input id="eq-value" type="text" inputmode="decimal" autocomplete="off" placeholder="例 7.3">
+          </div>
+          <div class="input-row">
+            <label for="eq-scale">公式</label>
+            <select id="eq-scale"></select>
+          </div>
+          <p class="eq-hint">ML / Ms / Mj 與 Mw 在 M 4.5~7 接近；M &gt; 7.5 後 Mw 較準確；mb 僅適用 M &lt; 6（>6 易飽和）。</p>
+        </section>
+
         <h2 class="section-title">◆ 快速範例</h2>
         <div id="preset-list" class="preset-list" aria-label="預設事件"></div>
 
